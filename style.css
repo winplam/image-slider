@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;;
+    padding: 0;
+}
+
+:root {
+    --text-color: #FFFFFF;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+}
+
+img {
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Slideshow container */
+#slideshow-container {
+    margin: 10px auto 10px auto;
+    max-height: 90%;
+    max-width: 90%;
+    position: relative;
+    box-shadow: 3px 3px 3px #000000;
+}
+
+/* Hide the images by default */
+.slide {
+    display: none;
+}
+
+/* Next & previous buttons */
+#prev, #next {
+    border-radius: 0 3px 3px 0;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    font-weight: bold;
+    padding: 10px 15px 10px 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 300ms ease;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+#next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+    padding: 10px 10px 10px 15px;
+}
+
+/* Darken padding around previous and next arrows on hover */
+#prev:hover, #next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.caption {
+    bottom: 15px;
+    color: var(--text-color);
+    font-size: 18px;
+    position: absolute;
+    text-align: center;
+    text-shadow: 1px 1px 1px #000000;
+    width: 100%;
+}
+
+/* "Page" number of image */
+.pagination {
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px 15px;
+    position: absolute;
+    text-shadow: 1px 1px 1px #000000;
+    top: 0;
+}
+
+/* Dot/bullets indicators */
+#dots-container {
+    text-align: center;
+}
+
+.dots {
+    background-color: #BBBBBB;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 15px;
+    margin: 0 2px;
+    box-shadow: 1px 1px 1px #000000;
+    transition: background-color 300ms ease;
+    width: 15px;
+}
+
+.active, .dots:hover {
+    background-color: darkslateblue;
+}
+
+/*Fading animation*/
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 300ms;
+    animation-name: fade;
+    animation-duration: 300ms;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    #prev, #next, .caption {
+        font-size: 12px
+    }
+}
